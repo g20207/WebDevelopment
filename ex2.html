@@ -1,0 +1,72 @@
+<!---Create a HTML form that has number of Textboxes. 
+    When the form runs in the Browser fill the textboxes with data. Write JavaScript code that verifies that all textboxes has been filled. 
+    If a textboxes has been left empty, popup an alert indicating which textbox has been left empty.-->
+
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form name = "myForm" onsubmit = "return(validation());">
+        <!--return statement says that validation() should determine whether the event(submission) should continue based on what it returns(true/false),
+             and what it returns(here false) is passed to the submit event only when the return is included.
+             if the fn is called without the return in the onsubmit, the fn is executed but the event is not prevented when false is returned-->
+        <table cellspacing = "6" cellpadding = "6" border = "5" style = "background-color:rgb(248, 243, 116);">
+            <tr>
+                <td>Name</td>
+                <td><input type = "text" name = "Name" style="background-color: aliceblue;"/></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input type = "text" name = "Email" style="background-color: aliceblue;"/></td>
+            </tr>
+            <tr>
+                <td>Zip Code</td>
+                <td><input type = "text" name = "Zip" style="background-color: aliceblue;"/></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><select name = "Country" >
+                        <option value = "-1" selected>[Choose your country]</option>
+                        <option value = "1" >INDIA</option>
+                        <option value = "2" >USA</option>
+                        <option value = "3" >Srilanka</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" align = "center"><input type = "submit" style="background-color: pink;"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validation()
+    {
+        if(document.myForm.Name.value == "")
+        {
+            alert("Please Provide Your Name"); 
+            document.myForm.Name.focus();  
+            return false;  //next statement is not executed when false is returned.
+        }
+        if(document.myForm.Email.value == "")
+        {
+            alert("Please Provide Your Email ID"); 
+            document.myForm.Email.focus();
+            return false;
+        }
+        if (document.myForm.Zip.value == "")
+        {
+            alert("Please Provide zip code");
+            document.myForm.Zip.focus();
+            return false;
+        }
+        if(document.myForm.Country.value == "-1")
+        {
+            alert("Please Provide Your Country Name");
+            return false;
+        }
+    }
+</script>
+</html>
