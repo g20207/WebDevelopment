@@ -1,0 +1,34 @@
+<!--Develop a HTML Form, which accepts any Mathematical expression.
+ Write JavaScript code to Evaluates the expression and Displays the result.-->
+ <html>
+<head>
+<title>Online Calculator</title>
+</head>
+<body >   
+    <form name = "formCalculator">
+        <fieldset style="width:39%;background-color: rgb(201, 161, 238);">
+            <strong><legend style="color:brown;font-size: 200%;">Calculator🧮</legend></strong>
+        <table>
+            <tr>
+                <td style="font-size: 130%">Enter the mathematical expression:</td>
+                <td><input style = "width: 120%;" type = "text" name = "expression"/></td>
+            </tr>
+            <tr>
+                <td style="color:brown;font-size:130%;"><strong>RESULT:</strong></td> 
+                <td><input style = "width: 120%;" type = "text" name = "outputResult" disabled/></td>
+            </tr>     
+            <tr>
+                <td><br><input type = "button" style="width:40%;height:30;" value = "calculate!" onclick = "Evaluation()" /></td>
+                <!--onclick = "Evaluation()" triggers Evaluation when button is clicked-->
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</body>
+<script>
+    function Evaluation()
+    {
+        document.formCalculator.outputResult.value = eval(document.formCalculator.expression.value);
+    }
+</script>
+</html>
