@@ -1,0 +1,68 @@
+<!--Ex no.1-- CREATE A FORM HAVING NUMBER OF ELEMENTS (TEXT BOXES,RADIO BUTTONS,CHECKBOXES AND SO ON)
+              WRITE JS CODE TO COUNT THE NUMBER OF ELEMENTS IN THE FORM                              -->
+<html>
+<head>
+<title>Application Form</title>
+</head>
+<body>
+    <form id = "myForm">
+        <h1>JOB APPLICATION FORM</h1>
+        <fieldset style="width:50%;background-color:rgb(232, 252, 251)">
+           <strong> <legend style="color:goldenrod;font-size:150%">Employee details:</legend></strong>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type = "text"/></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type = "text"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type = "password"/></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type = "password"></td>
+            </tr>           
+            <tr>
+                <td><br>Mobile:</td>
+                <td><input type = "text" ></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><br><textarea rows="5" cols="21"></textarea></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type = "radio" name = "gender"/>Male
+                <input type = "radio" name = "gender"/>Female</td>
+            </tr>
+            <tr>
+                <td><br>Languages Known:
+                <br><input type = "checkbox"/>HTML5
+                <br><input type = "checkbox"/>CSS3
+                <br><input type = "checkbox"/>JS
+                <br><input type = "checkbox"/>Node.Js
+                <br><input type = "checkbox"/>php</td>
+            </tr>
+            <tr>
+                <td><br><br><strong><input type = "checkbox"/>The above details are true to the best of my knowledge.</td></strong>
+            </tr>
+            <tr>
+                <td><input type="button" value="submit"
+                    style="background-color:red;color:white;height:30;width:80;"/></td>
+            </tr>
+        </table>
+      </fieldset>
+    </form>
+    <script>
+     alert("The number of elements in the form are "+document.getElementById("myForm").length);
+    </script>
+</body>
+</html>
